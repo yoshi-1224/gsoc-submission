@@ -12,7 +12,7 @@ This feature has been merged. The code can be found in this [PR](https://github.
 
 ### Feature 2: Helm input type
 
-This creates the Python binding to `helm template` command written in Golang such that users can render helm templates as a new input type to kapitan. The original issue is found [here](https://github.com/deepmind/kapitan/issues/143). The documentation is available [here](https://kapitan.dev/compile/#helm).
+This creates the Python binding to `helm template` command written in Golang such that users can render helm templates as a new input type to kapitan without the helm executable or Tiller server. The original issue is found [here](https://github.com/deepmind/kapitan/issues/143). The documentation is available [here](https://kapitan.dev/compile/#helm).
 
 This feature has been merged. The code can be found in this [PR](https://github.com/deepmind/kapitan/pull/307) on Github.
 
@@ -22,11 +22,31 @@ This feature allows users to validate compiled output against json schemas such 
 
 This feature has been merged. The code can be found in this [PR](https://github.com/deepmind/kapitan/pull/317) on Github.
 
+#### TODO
+
+- this can be extended to use custom json schema and other type of validations such as for Terraform
+- making json schema validation a function/filter for jsonnet and jinja2 template input types
+
 ### Feature 4: standalone binary
 
-Kapitan has been available via pip or docker. A standalone binary for Linux systems has been created using Pyinstaller which ships the Python interpreter as well so that it can even run on systems without Python runtime.
+Kapitan has been available via pip or docker. A standalone binary for Linux systems has been created using Pyinstaller which ships the Python interpreter as well so that it can even run on systems without Python runtime. The original issue is found [here](https://github.com/deepmind/kapitan/issues/145).
+
+This feature has been merged. The code can be found in this [PR](https://github.com/deepmind/kapitan/pull/323) on Github.
+
+#### TODO
+
+- making the binary part of the release on Travis.
 
 ## Extra stuff
 
 - Secret sub-variables feature that allows multiple secrets to be stored in a single yaml file (Merged):  <https://github.com/deepmind/kapitan/pull/282>
-- Creating a more structured documentation using mkdocs (Merged): <https://github.com/deepmind/kapitan/pull/331>
+
+- Creating a more structured documentation using mkdocs (Merged): <https://github.com/deepmind/kapitan/pull/331>. In addition, all the documentation for the new features linked above has been written by me as I implemented them.
+
+- Example walk-through for kubernetes (Merged): <https://github.com/deepmind/kapitan/pull/340>
+
+  ​
+
+  ​
+
+
